@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Lab08_1B_210041106.Pokedex_Database_Controller">
+   <center>
+      <TableView fx:id="pokedexDatabaseTableView" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="pokedexDatabaseIDTableColumn" prefWidth="66.0" text="ID" />
+            <TableColumn fx:id="pokedexDatabaseNameTableColumn" prefWidth="142.0" text="Name" />
+            <TableColumn fx:id="pokedexDatabaseTypeTableColumn" prefWidth="135.0" text="Type" />
+            <TableColumn fx:id="pokedexDatabaseFavouriteTableColumn" prefWidth="75.0" text="Favourite" />
+         </columns>
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <left>
+      <VBox alignment="CENTER_LEFT" prefHeight="265.0" prefWidth="168.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Search Pokemon" />
+            <TextField fx:id="keywordTextField" prefWidth="130.0" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Selection" prefHeight="25.0" prefWidth="105.0" text="See Details" />
+            <Button mnemonicParsing="false" onAction="#switchtoPokedexDashboardScene" prefHeight="25.0" prefWidth="105.0" text="Go Back" />
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="199.0" preserveRatio="true">
+               <image>
+                  <Image url="@Pokédex_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
